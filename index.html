@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HALWater Control</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>HALWater Control</h1>
+
+  <form id="commandForm">
+    <label for="deviceId">Device ID:</label>
+    <input type="text" id="deviceId" name="deviceId" required />
+
+    <label for="payload">Payload (16 chars HEX):</label>
+    <input type="text" id="payload" name="payload" maxlength="16" required />
+
+    <button type="submit">Enviar comando</button>
+  </form>
+
+  <div id="response"></div>
+
+  <h2>Dashboard</h2>
+  <iframe
+    src="https://juandbravo.grafana.net/d-solo/degjbudhreubkd/myfirstdashboard?orgId=1&from=1743131190838&to=1743152790838&timezone=browser&var-timespan=-6h&panelId=1&__feature.dashboardSceneSolo"
+    width="100%"
+    height="500"
+    frameborder="0"
+  ></iframe>
+
+  <script src="script.js"></script>
+</body>
+</html>
